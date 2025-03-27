@@ -53,7 +53,11 @@ document.addEventListener("DOMContentLoaded", () => {
         setTimeout(() => {
           const coin = document.createElement("div");
           coin.classList.add("coin");
-          document.body.appendChild(coin);
+
+          const painel = document.querySelector(".interface-panel");
+          painel.appendChild(coin);
+
+
           coin.style.animation = "coin-fall 1s forwards";
   
           somMoeda.currentTime = 0;
@@ -71,7 +75,13 @@ document.addEventListener("DOMContentLoaded", () => {
     function mostrarDoceEntregue(tipo) {
       const doce = document.createElement("div");
       doce.classList.add("doce-entregue");
-      doce.textContent = `🍬 Doce ${tipo}`;
+      const imagem = document.createElement("img");
+      imagem.src = `candy${tipo === "A" ? 1 : tipo === "B" ? 2 : 3}.png`;
+      imagem.alt = `Doce ${tipo}`;
+      imagem.style.width = "80px";
+      imagem.style.height = "auto";
+      doce.appendChild(imagem);
+      
       document.body.appendChild(doce);
   
       setTimeout(() => {

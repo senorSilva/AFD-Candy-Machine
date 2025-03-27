@@ -40,14 +40,14 @@
     flex-direction: column;
     align-items: center;
     position: relative;
-    background-color: #0c0f2c;
+    background-color: #7a0c15;
     padding: 30px;
     border-radius: 4px;
-    border: 3px solid #00f7ff;
+    border: 3px solid #ffb100;
     box-shadow:
-      inset 0 0 0 2px #031124,
-      0 0 12px #00f7ff,
-      0 0 32px #00f7ff;
+    inset 0 0 0 2px #400b0b,
+    0 0 12px #ffb100,
+    0 0 32px #ffb100;
     width: 560px;
     opacity: 0;
     transform: translateY(60px) scale(0.95);
@@ -65,7 +65,7 @@
   #fechar-maquina {
     position: absolute;
     top: 12px;
-    right: 140px; /* distância suficiente da borda da interface-panel */
+    right: 12px; 
     background: transparent;
     border: none;
     font-size: 22px;
@@ -85,8 +85,8 @@
   h1 {
     font-size: 20px;
     margin-bottom: 25px;
-    color: #ff3d96;
-    text-shadow: 0 0 4px #ff3d96, 0 0 8px #ff3d96;
+    color: #ffe8a3;
+    text-shadow: 0 0 4px #ffb100, 0 0 8px #ffb100;
     letter-spacing: 1px;
     text-align: center;
   }
@@ -98,9 +98,9 @@
   
   .section h2 {
     font-size: 14px;
-    color: #00f7ff;
+    color: #ffe8a3;
     margin-bottom: 12px;
-    text-shadow: 0 0 3px #00f7ff;
+    text-shadow: 0 0 3px #ffb100;
   }
   
   .button-container {
@@ -126,21 +126,21 @@
   }
   
   button {
-    background-color: #031124;
-    border: 2px solid #00f7ff;
-    color: #00f7ff;
+    background-color: #400b0b;
+    border: 2px solid #ffb100;
+    color: #ffe8a3;
     font-size: 10px;
     font-family: 'Press Start 2P', monospace;
     text-transform: uppercase;
     padding: 8px 12px;
     cursor: pointer;
-    box-shadow: inset 0 0 0 1px #000, 0 0 5px #00f7ff;
+    box-shadow: inset 0 0 0 1px #000, 0 0 5px #ffb100;
     transition: transform 0.2s ease, box-shadow 0.2s ease;
   }
   
   button:hover {
-    background-color: #0a182e;
-    box-shadow: 0 0 10px #00f7ff;
+    background-color: #5e1212;
+    box-shadow: 0 0 10px #ffb100;
   }
   
   button:active {
@@ -158,28 +158,28 @@
   #estado {
     font-size: 14px;
     margin-bottom: 20px;
-    color: #00f7ff;
-    text-shadow: 0 0 4px #00f7ff;
+    color: #d8a400;
+    text-shadow: 0 0 4px #d8a400;
   }
   
   #mensagem {
-    background-color: #031124;
-    border: 2px solid #00f7ff;
-    color: #00f7ff;
+    background-color: #400b0b;
+    border: 2px solid #ffb100;
+    color: #ffe8a3;
     padding: 10px;
     margin-top: 20px;
     font-size: 12px;
-    text-shadow: 0 0 3px #00f7ff;
+    text-shadow: 0 0 3px #ffb100;
     border-radius: 4px;
   }
   
   .hud-box {
     background-color: #000814;
-    border: 2px solid #00f7ff;
+    border: 2px solid #d8a400;
     padding: 18px;
     margin-bottom: 16px;
     width: 100%;
-    box-shadow: inset 0 0 0 2px #00f7ff;
+    box-shadow: inset 0 0 0 2px #d8a400;
   }
   
   .interface-layout {
@@ -194,11 +194,11 @@
   /* Painel lateral com fresta e moeda inserida */
   .interface-panel {
     width: 130px;
-    background: linear-gradient(180deg, #3f008e, #7a00c7);
-    border-left: 4px solid #00f7ff;
+    background: linear-gradient(180deg, #ff7700, #ff7700);
+    border-left: 4px solid #ff7700;
     box-shadow:
       inset 0 0 0 3px #000,
-      0 0 12px #00f7ff,
+      0 0 12px #ff7700,
       4px 0 0 #000; /* black right edge for pixel look */
     position: relative;
     display: flex;
@@ -218,8 +218,8 @@
     width: 50px;
     height: 10px;
     background: #000;
-    border: 3px solid #00f7ff;
-    box-shadow: inset 0 0 0 1px #002a2e, 0 0 6px #00f7ff;
+    border: 3px solid #ff7700;
+    box-shadow: inset 0 0 0 1px #002a2e, 0 0 6px #ff7700;
     border-radius: 2px;
     z-index: 5;
   }
@@ -235,17 +235,17 @@
     background-color: gold;
     border-radius: 50%;
     border: 2px solid #d8a400;
-    opacity: 0;
     animation: coin-fall 1s forwards;
     z-index: 10;
   }
   
-  @keyframes coin-fall {
-    0%   { top: -40px; opacity: 1; }
-    50%  { top: 100px; }
-    100% { top: calc(65% + 5px); opacity: 0; }
-  }
   
+@keyframes coin-fall {
+  0%   { top: -40px; }
+  50%  { top: 100px; }
+  100% { top: calc(65% + 5px); }
+}
+
   /* Doce entregue */
   .doce-entregue {
     position: absolute;
@@ -256,10 +256,10 @@
     font-weight: bold;
     background-color: #111;
     color: #fff;
-    border: 2px solid #ff00cc;
+    border: 2px solid #ffffff;
     padding: 20px 30px;
     border-radius: 12px;
-    box-shadow: 0 0 10px #ff00cc;
+    box-shadow: 0 0 10px #ffffff;
     animation: aparecer-doce 0.5s ease-out, desaparecer-doce 0.5s ease-in 1.5s forwards;
     z-index: 15;
   }
