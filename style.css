@@ -1,9 +1,11 @@
+/* Reset básico para garantir consistência entre navegadores */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+/* Estilo geral do body: centraliza conteúdo e aplica fundo */
 body {
   font-family: 'Press Start 2P', Arial, sans-serif;
   display: flex;
@@ -17,6 +19,7 @@ body {
   position: relative;
 }
 
+/* Botão inicial (imagem) para abrir a máquina */
 #abrir-maquina {
   position: absolute;
   bottom: 20px;
@@ -32,10 +35,12 @@ body {
   transition: transform 0.3s ease;
 }
 
+/* Efeito de zoom ao passar o mouse sobre a imagem */
 #abrir-maquina img:hover {
   transform: scale(1.05);
 }
 
+/* Container principal da máquina */
 .container {
   flex-direction: column;
   align-items: center;
@@ -57,12 +62,14 @@ body {
   text-align: center;
 }
 
+/* Torna o container visível */
 .container.visible {
   opacity: 1;
   transform: translateY(0) scale(1);
   pointer-events: auto;
 }
 
+/* Botão para fechar a interface da máquina */
 #fechar-maquina {
   position: absolute;
   top: 12px;
@@ -81,6 +88,7 @@ body {
   transform: scale(1.1);
 }
 
+/* Título principal da máquina */
 h1 {
   font-size: 20px;
   margin-bottom: 25px;
@@ -90,11 +98,13 @@ h1 {
   text-align: center;
 }
 
+/* Bloco de seção com margem inferior */
 .section {
   margin-bottom: 20px;
   text-align: center;
 }
 
+/* Título das seções */
 .section h2 {
   font-size: 14px;
   color: #fff8c0;
@@ -102,6 +112,7 @@ h1 {
   text-shadow: 0 0 3px #ffb100;
 }
 
+/* Layout dos botões (notas e doces) */
 .recharge-buttons,
 .candy-buttons {
   display: flex;
@@ -110,6 +121,7 @@ h1 {
   margin-bottom: 5px;
 }
 
+/* Estilo dos botões */
 .recharge-buttons button,
 .candy-buttons button {
   width: 120px;
@@ -125,15 +137,18 @@ h1 {
   transition: transform 0.2s ease;
 }
 
+/* Efeito hover nos botões */
 button:hover {
   background-color: #ff8c1a;
   transform: translateY(-2px);
 }
 
+/* Efeito ao clicar no botão */
 button:active {
   transform: scale(0.95);
 }
 
+/* Estilo quando o botão está desabilitado */
 button:disabled {
   background-color: #333;
   border-color: #111;
@@ -142,6 +157,7 @@ button:disabled {
   cursor: not-allowed;
 }
 
+/* Texto que mostra o valor atual inserido */
 #estado {
   font-size: 14px;
   margin-bottom: 20px;
@@ -149,6 +165,7 @@ button:disabled {
   text-shadow: 0 0 4px #d8a400;
 }
 
+/* Mensagem abaixo dos botões */
 #mensagem {
   background-color: #7b1a0c;
   border: 2px solid #000;
@@ -160,6 +177,7 @@ button:disabled {
   border-radius: 4px;
 }
 
+/* Caixa decorativa para agrupar seções */
 .hud-box {
   background-color: #55160f;
   border: 3px solid #000;
@@ -169,15 +187,18 @@ button:disabled {
   box-shadow: inset 2px 2px #2c0c07;
 }
 
+/* Layout de divisão entre painel lateral e área principal */
 .interface-layout {
   display: flex;
   width: 100%;
 }
 
+/* Área principal da máquina (onde estão os botões e info) */
 .interface-main {
   flex: 1;
 }
 
+/* Painel lateral com slot de moedas */
 .interface-panel {
   width: 130px;
   background: #ff6d00;
@@ -194,6 +215,7 @@ button:disabled {
   padding-top: 40px;
 }
 
+/* Slot de moedas visual */
 #coin-slot {
   position: absolute;
   top: 65%;
@@ -208,6 +230,7 @@ button:disabled {
   z-index: 5;
 }
 
+/* Estilo da animação das moedas */
 .coin {
   position: absolute;
   top: -40px;
@@ -222,6 +245,7 @@ button:disabled {
   z-index: 10;
 }
 
+/* Animação de queda da moeda */
 @keyframes coin-fall {
   0% {
     top: -40px;
@@ -239,6 +263,7 @@ button:disabled {
   }
 }
 
+/* Estilo do doce que aparece ao ser entregue */
 .doce-entregue {
   position: absolute;
   bottom: 20px;
@@ -248,6 +273,7 @@ button:disabled {
   z-index: 20;
 }
 
+/* Animação de aparição do doce */
 @keyframes aparecer-doce {
   from {
     opacity: 0;
@@ -259,6 +285,7 @@ button:disabled {
   }
 }
 
+/* Animação de desaparecimento do doce */
 @keyframes desaparecer-doce {
   to {
     opacity: 0;
@@ -266,6 +293,7 @@ button:disabled {
   }
 }
 
+/* Porta de saída do doce */
 #saida-doce {
   width: 100%;
   max-width: 480px;
@@ -278,10 +306,12 @@ button:disabled {
   box-shadow: inset 0 0 8px #000;
 }
 
+/* Animação de "tremor" da máquina */
 .shake {
   animation: shake 0.6s;
 }
 
+/* Keyframes do tremor */
 @keyframes shake {
   0% { transform: translateX(0); }
   20% { transform: translateX(-5px); }
