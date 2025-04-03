@@ -40,3 +40,6 @@ O usuário pode inserir notas, visualizar o saldo e comprar doces que "saem" da 
 -------------------------
 - Fonte "Press Start 2P" do Google Fonts (inclusa via link)
 - Nenhuma dependência externa adicional
+
+## LINKS 
+![[LINK](https://gamma.app/docs/Automatos-Finitos-Uma-Doce-Introducao-u2y3cqtgyrl15a9?mode=doc)]
