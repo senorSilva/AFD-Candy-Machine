@@ -1,0 +1,120 @@
+body {
+    font-family: 'Press Start 2P', monospace;
+    margin: 0;
+    background-color: white;
+    overflow: hidden;
+  }
+  
+  #case2-container {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+  
+  
+  #painel-elevador {
+    position: absolute;
+    top: 30%; /* ajustado para descer os botões */
+    left: calc(50% + 300px); /* leve deslocamento para a direita */
+    /*transform: translateY(-50%);*/
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    z-index: 2;
+}
+
+  .andar-btn {
+    background-color: #333;
+    color: #fff;
+    font-family: 'Press Start 2P';
+    font-size: 12px;
+    border: 2px solid #000;
+    padding: 10px;
+    cursor: pointer;
+  }
+  
+  #display-andar {
+    font-size: 20px;
+    margin-top: 20px;
+    color: #333;
+  }
+  
+  .elevador-area {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#porta-elevador {
+    position: absolute;
+    top: -32px;     /* ajuste vertical manual */
+    left: -220px;    /* ajuste horizontal manual */
+    width: 430px;
+    height: 620px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    overflow: hidden;
+}
+
+  #elevador-interior {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+    opacity: 0;
+    transition: opacity 1s ease;
+  }
+  
+  #porta-elevador.abrir #elevador-interior {
+    opacity: 1;
+  }
+  
+  .porta {
+    width: 50%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    transition: transform 1s ease;
+    z-index: 1;
+  }
+  
+  .porta.esquerda {
+    transform: translateX(0);
+  }
+  
+  .porta.direita {
+    transform: translateX(0);
+  }
+  
+  #porta-elevador.abrir .esquerda {
+    transform: translateX(-100%);
+  }
+  
+  #porta-elevador.abrir .direita {
+    transform: translateX(100%);
+  }
+  
+  .voltar {
+    margin-top: 30px;
+    padding: 10px 20px;
+    font-family: 'Press Start 2P', monospace;
+    background-color: #ff6d00;
+    color: #fff;
+    border: 3px solid #000;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+  }
+  
+  .voltar:hover {
+    background-color: #ff8c1a;
+    transform: scale(1.05);
+  }
