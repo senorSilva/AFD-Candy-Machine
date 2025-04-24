@@ -41,5 +41,44 @@ O usuário pode inserir notas, visualizar o saldo e comprar doces que "saem" da 
 - Fonte "Press Start 2P" do Google Fonts (inclusa via link)
 - Nenhuma dependência externa adicional
 
+---
+
+🛗 CASE 2: ELEVADOR INTERATIVO (PDA)
+====================================
+
+📁 DESCRIÇÃO
+-----------
+Este segundo case simula o funcionamento de um elevador com transições visuais entre andares, baseado no conceito de **Autômato de Pilha (PDA)**. Ao invés de apenas ir diretamente para um andar (como um AFD), o histórico de andares é armazenado em uma **pilha**, permitindo ações como "voltar ao andar anterior".
+
+🧩 ESTRUTURA DO CASE 2
+------------------------
+- elevador.html   → Interface visual do elevador
+- elevador.css    → Estilização do painel e áreas do elevador
+- elevador.js     → Lógica com pilha (PDA) para navegação de andares
+- Imagens:
+  - bg_lvl_X.png → Planos de fundo por andar
+  - door_lvl_X_l/r.png → Portas esquerda/direita por andar
+  - elevator_interior.png → Interior do elevador
+
+🎮 FUNCIONALIDADES
+-------------------
+✔ Navegação entre térreo e 3 andares  
+✔ Transição visual com abertura e fechamento de portas  
+✔ Histórico de navegação via pilha (PDA)  
+✔ Retorno ao andar anterior via tecla "Backspace" ou "Seta para Baixo"  
+✔ Interface retro com fontes estilo 8-bit  
+
+🚀 COMO USAR
+------------
+1. Abra o arquivo `elevador.html` em um navegador.
+2. Clique nos botões de andares para subir ou descer.
+3. Use a tecla "Backspace" para retornar ao andar anterior.
+4. O visual muda dinamicamente conforme o andar visitado.
+
+📦 DEPENDÊNCIAS EXTERNAS
+-------------------------
+- Fonte "Press Start 2P" do Google Fonts (inclusa via link)
+- Nenhuma biblioteca adicional
+
 ## APRESENTAÇÃO 
 ![[LINK](https://gamma.app/docs/Automatos-Finitos-Uma-Doce-Introducao-u2y3cqtgyrl15a9?mode=doc)]
