@@ -48,7 +48,7 @@ document.addEventListener("DOMContentLoaded", () => {
   let emMovimento = false;
 
   function atualizarVisual(andar) {
-    const container = document.getElementById("case2-container");
+    const container = document.getElementById("case2-background");
     container.style.backgroundImage = backgrounds[andar] === "white"
       ? "none"
       : `url(${backgrounds[andar]})`;
@@ -73,6 +73,7 @@ document.addEventListener("DOMContentLoaded", () => {
     fecharPortas();
     const tempo = Math.abs(destino - atual) * 2000;
     displayAndar.textContent = `Indo para o andar ${destino}...`;
+    displayAndar.textContent = destino === 0 ? "Indo para o térreo" : `Indo para o andar ${destino}...`;
 
     setTimeout(() => {
       pilhaAndares.push(destino);
